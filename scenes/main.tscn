@@ -1,3 +1,166 @@
-[gd_scene format=3 uid="uid://gi6c4adcmmkt"]
+[gd_scene load_steps=5 format=3 uid="uid://gi6c4adcmmkt"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/ReferenceNodeResource/ReferenceNodeSetter.gd" id="1_jkl7e"]
+[ext_resource type="Resource" uid="uid://b6jk3570aadtv" path="res://Resources/ReferenceNodeResource/game_parent_reference.tres" id="2_livme"]
+[ext_resource type="Resource" uid="uid://bffm785ccbql8" path="res://Resources/ReferenceNodeResource/gui_parent_reference.tres" id="3_ekhoy"]
+[ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://scenes/menu/sliders/audio_slider.tscn" id="4_lxbwj"]
 
 [node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(480, 270)
+render_target_update_mode = 4
+
+[node name="GameParent" type="Node2D" parent="CanvasLayer/SubViewportContainer/SubViewport" node_paths=PackedStringArray("reference_node")]
+script = ExtResource("1_jkl7e")
+reference_node = NodePath(".")
+reference_resource = ExtResource("2_livme")
+
+[node name="GameGuiParent" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("reference_node")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jkl7e")
+reference_node = NodePath(".")
+reference_resource = ExtResource("3_ekhoy")
+
+[node name="Title" type="Control" parent="CanvasLayer/GameGuiParent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/GameGuiParent/Title"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GameGuiParent/Title/MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Label" type="Label" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.5
+offset_top = -11.5
+offset_right = 47.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "COOL GAME"
+
+[node name="TitleMenu" type="VBoxContainer" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="NewGame" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/TitleMenu"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Options" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/TitleMenu"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/TitleMenu"]
+layout_mode = 2
+text = "Quit"
+
+[node name="OptionMenu" type="VBoxContainer" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="Resolution" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/OptionMenu"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="Audio" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/OptionMenu"]
+layout_mode = 2
+text = "Audio
+"
+
+[node name="Controls" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/OptionMenu"]
+layout_mode = 2
+text = "Controls"
+
+[node name="Back" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/OptionMenu"]
+layout_mode = 2
+text = "Back"
+
+[node name="AudioMenu" type="VBoxContainer" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="Master" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu" instance=ExtResource("4_lxbwj")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu/Master" index="0"]
+text = "Master Volume"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu"]
+layout_mode = 2
+
+[node name="Music" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu" instance=ExtResource("4_lxbwj")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu/Music" index="0"]
+text = "Music Volume"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu"]
+layout_mode = 2
+
+[node name="Sounds" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu" instance=ExtResource("4_lxbwj")]
+layout_mode = 2
+
+[node name="Label" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu/Sounds" index="0"]
+text = "Sounds Volume"
+
+[node name="HSeparator3" type="HSeparator" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu"]
+layout_mode = 2
+text = "Back"
+
+[editable path="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu/Master"]
+[editable path="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu/Music"]
+[editable path="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/AudioMenu/Sounds"]

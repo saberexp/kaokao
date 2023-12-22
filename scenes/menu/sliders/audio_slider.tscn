@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c4jwvw17x6fwl"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+
+[node name="Slider" type="HSlider" parent="."]
+layout_mode = 2

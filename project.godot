@@ -18,3 +18,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 SoundManager="*res://addons/Godot_library/Singletons/SoundManager/Scenes/SoundManager.tscn"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/Godot_library/plugin.cfg")

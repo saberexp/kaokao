@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ReferenceNodeResource" load_steps=2 format=3 uid="uid://b6jk3570aadtv"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/ReferenceNodeResource/ReferenceNodeResource.gd" id="1_yl2p0"]
+
+[resource]
+resource_name = "Game  Parent"
+script = ExtResource("1_yl2p0")

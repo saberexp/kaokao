@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ReferenceNodeResource" load_steps=2 format=3 uid="uid://bffm785ccbql8"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/ReferenceNodeResource/ReferenceNodeResource.gd" id="1_1mbcr"]
+
+[resource]
+resource_name = "GUI Parent"
+script = ExtResource("1_1mbcr")
