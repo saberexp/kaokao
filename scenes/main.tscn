@@ -217,6 +217,7 @@ text = "Back"
 [connection signal="pressed" from="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/GraphicsMenu/Back" to="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
 [connection signal="pressed" from="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/ControlsMenu/Back" to="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
 [connection signal="pressed" from="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/AudioMenu/Back" to="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
+[connection signal="pressed" from="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/AudioMenu/Back" to="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/AudioMenu/AudioSettingGuiManager" method="save"]
 
 [editable path="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/AudioMenu/Master"]
 [editable path="CanvasLayer/GameGuiParent/Title/MarginContainer/VBoxContainer/Container/AudioMenu/Music"]

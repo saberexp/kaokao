@@ -5,6 +5,7 @@ extends Node
 @export var audio_settings_resource:AudioSettingsResource
 
 func _ready()->void:
+	audio_settings_resource.load_resource()
 	update_sliders()
 	for node in slider_container:
 		var bus_name: = node.name
@@ -20,9 +21,12 @@ func update_sliders()->void:
 		slider.value = audio_settings_resource.get_bus_volume(bus_name)
 
 ## callback for slider drag end
-func on_drag_end(bus_name:String, slider:Slider)->void:
+func on_drag_end(new_value: float, bus_name:String, slider:Slider)->void:
 	audio_settings_resource.set_bus_volume(bus_name, slider.value)
 
 ## callback for slider value change
 func on_value_changed(value:float, bus_name:String, slider:Slider)->void:
 	audio_settings_resource.set_bus_volume(bus_name, slider.value)
+
+func save()->void:
+	audio_settings_resource.save_resource()
