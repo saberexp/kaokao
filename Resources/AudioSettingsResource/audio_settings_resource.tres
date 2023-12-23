@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AudioSettingsResource" load_steps=3 format=3 uid="uid://6gy6omnuu0y"]
+
+[ext_resource type="AudioBusLayout" uid="uid://jjw1kway6524" path="res://addons/Godot_library/Singletons/SoundManager/Resources/AudioBussLayout.tres" id="1_blmrc"]
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/AudioSettingsResource/AudioSettingsResource.gd" id="1_pka5o"]
+
+[resource]
+resource_name = "Audio Settings"
+script = ExtResource("1_pka5o")
+audio_bus_layout = ExtResource("1_blmrc")
