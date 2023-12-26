@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://seqe10084dwb"]
+
+[ext_resource type="PackedScene" uid="uid://7847urnhb8hl" path="res://scenes/rooms/room_template.tscn" id="1_2dih5"]
+
+[node name="TitleRoom" instance=ExtResource("1_2dih5")]
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+offset_right = 484.0
+offset_bottom = 79.0
+color = Color(0.52549, 0.756863, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." index="1"]
+offset_top = 76.0
+offset_right = 484.0
+offset_bottom = 282.0
+color = Color(0.47451, 0.768627, 0.337255, 1)

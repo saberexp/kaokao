@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SoundManager="*res://addons/Godot_library/Singletons/SoundManager/Scenes/SoundManager.tscn"
+SceneManager="*res://addons/Godot_library/Singletons/SceneManager/Scenes/SceneManager.tscn"
+SaveManager="*res://addons/Godot_library/Singletons/SaveManager/Scenes/SaveManager.tscn"
 
 [display]
 

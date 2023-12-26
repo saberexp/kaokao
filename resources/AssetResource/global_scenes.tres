@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AssetResource" load_steps=2 format=3 uid="uid://bmg8xfji6hd0c"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/AssetResource/AssetResource.gd" id="1_3j56b"]
+
+[resource]
+resource_name = "Global Scenes"
+script = ExtResource("1_3j56b")
+list = Array[String](["res://scenes/rooms/title_room.tscn"])
+selected = "title_room"
+file_path = ""
+asset_dir = ""
+asset_extension = ""

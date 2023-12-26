@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://gi6c4adcmmkt"]
+[gd_scene load_steps=4 format=3 uid="uid://gi6c4adcmmkt"]
 
 [ext_resource type="Script" path="res://addons/Godot_library/Resources/ReferenceNodeResource/ReferenceNodeSetter.gd" id="1_jkl7e"]
 [ext_resource type="Resource" uid="uid://b6jk3570aadtv" path="res://resources/ReferenceNodeResource/game_parent_reference.tres" id="2_livme"]
 [ext_resource type="Resource" uid="uid://bffm785ccbql8" path="res://resources/ReferenceNodeResource/gui_parent_reference.tres" id="3_ekhoy"]
-[ext_resource type="PackedScene" uid="uid://dpv4epw1i5b4g" path="res://scenes/game_gui/title.tscn" id="4_8rrqr"]
 
 [node name="Main" type="Node2D"]
 
@@ -30,7 +29,7 @@ script = ExtResource("1_jkl7e")
 reference_node = NodePath(".")
 reference_resource = ExtResource("2_livme")
 
-[node name="GameGuiParent" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("reference_node")]
+[node name="GuiParent" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("reference_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,6 +39,3 @@ grow_vertical = 2
 script = ExtResource("1_jkl7e")
 reference_node = NodePath(".")
 reference_resource = ExtResource("3_ekhoy")
-
-[node name="Title" parent="CanvasLayer/GameGuiParent" instance=ExtResource("4_8rrqr")]
-layout_mode = 1

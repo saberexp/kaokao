@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AssetResource" load_steps=2 format=3 uid="uid://v8e0lonl6e1v"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/AssetResource/AssetResource.gd" id="1_kljnw"]
+
+[resource]
+resource_name = "GUI Scenes"
+script = ExtResource("1_kljnw")
+list = Array[String](["res://scenes/game_gui/title_gui.tscn"])
+selected = "title_gui"
+file_path = ""
+asset_dir = ""
+asset_extension = ""
