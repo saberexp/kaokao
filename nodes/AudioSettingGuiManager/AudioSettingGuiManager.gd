@@ -21,7 +21,7 @@ func update_sliders()->void:
 		slider.value = audio_settings_resource.get_bus_volume(bus_name)
 
 ## callback for slider drag end
-func on_drag_end(new_value: float, bus_name:String, slider:Slider)->void:
+func on_drag_end(_new_value: float, bus_name:String, slider:Slider)->void:
 	audio_settings_resource.set_bus_volume(bus_name, slider.value)
 
 ## callback for slider value change
