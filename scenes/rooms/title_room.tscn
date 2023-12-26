@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://7847urnhb8hl" path="res://scenes/rooms/room_template.tscn" id="1_2dih5"]
 
 [node name="TitleRoom" instance=ExtResource("1_2dih5")]
+gui_scene_key = "title_gui"
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 offset_right = 484.0

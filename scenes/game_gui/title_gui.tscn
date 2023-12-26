@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpv4epw1i5b4g"]
+[gd_scene load_steps=7 format=3 uid="uid://dpv4epw1i5b4g"]
 
 [ext_resource type="Script" path="res://addons/Godot_library/Nodes/MenuTraverseManager/MenuTraverseManager.gd" id="1_q1kds"]
+[ext_resource type="Script" path="res://nodes/Menu/NewGame.gd" id="2_3w4bi"]
 [ext_resource type="Script" path="res://nodes/AudioSettingGuiManager/AudioSettingGuiManager.gd" id="2_43xlx"]
+[ext_resource type="Script" path="res://nodes/Menu/Quit.gd" id="2_bf6ol"]
 [ext_resource type="Resource" uid="uid://6gy6omnuu0y" path="res://resources/AudioSettingsResource/audio_settings_resource.tres" id="3_eeftq"]
 [ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://scenes/menu/sliders/audio_slider.tscn" id="4_ruqo4"]
 
@@ -72,6 +74,7 @@ theme_override_constants/separation = 0
 [node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer/Container/TitleMenu"]
 layout_mode = 2
 text = "New Game"
+script = ExtResource("2_3w4bi")
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer/Container/TitleMenu"]
 layout_mode = 2
@@ -80,6 +83,7 @@ text = "Options"
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/Container/TitleMenu"]
 layout_mode = 2
 text = "Quit"
+script = ExtResource("2_bf6ol")
 
 [node name="OptionMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Container"]
 visible = false

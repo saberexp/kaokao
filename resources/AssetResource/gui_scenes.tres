@@ -5,7 +5,7 @@
 [resource]
 resource_name = "GUI Scenes"
 script = ExtResource("1_kljnw")
-list = Array[String](["res://scenes/game_gui/title_gui.tscn"])
+list = Array[String](["res://scenes/game_gui/title_gui.tscn", "res://scenes/game_gui/game_gui.tscn"])
 selected = "title_gui"
 file_path = ""
 asset_dir = ""
