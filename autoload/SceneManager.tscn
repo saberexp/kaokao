@@ -1,0 +1,16 @@
+[gd_scene load_steps=7 format=3 uid="uid://iq7ja4lavdso"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Singletons/SceneManager/SceneManager.gd" id="1_sivy3"]
+[ext_resource type="Resource" uid="uid://ckjoq2dw6s4kb" path="res://resources/AssetResource/game_scenes.tres" id="2_5cbn5"]
+[ext_resource type="Resource" uid="uid://v8e0lonl6e1v" path="res://resources/AssetResource/gui_scenes.tres" id="3_wd5ln"]
+[ext_resource type="Resource" uid="uid://bmg8xfji6hd0c" path="res://resources/AssetResource/global_scenes.tres" id="4_dtjbn"]
+[ext_resource type="Resource" uid="uid://b6jk3570aadtv" path="res://resources/ReferenceNodeResource/game_parent_reference.tres" id="5_kxqis"]
+[ext_resource type="Resource" uid="uid://bffm785ccbql8" path="res://resources/ReferenceNodeResource/gui_parent_reference.tres" id="6_4bhhv"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_sivy3")
+game_scenes = ExtResource("2_5cbn5")
+gui_scenes = ExtResource("3_wd5ln")
+global_scenes = ExtResource("4_dtjbn")
+game_parent_reference = ExtResource("5_kxqis")
+gui_parent_reference = ExtResource("6_4bhhv")

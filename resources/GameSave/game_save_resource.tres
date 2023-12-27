@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SaveableCollectionResource" load_steps=2 format=3 uid="uid://dsj8acdxymtvf"]
+
+[ext_resource type="Script" path="res://addons/Godot_library/Resources/SaveableResource/SaveableCollectionResource.gd" id="1_kwvuk"]
+
+[resource]
+resource_name = "Game Save"
+script = ExtResource("1_kwvuk")
+save_list = Array[Resource("res://addons/Godot_library/Resources/SaveableResource/SaveableResource.gd")]([])
+version = ""

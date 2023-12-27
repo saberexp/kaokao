@@ -15,11 +15,15 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
-SoundManager="*res://addons/Godot_library/Singletons/SoundManager/Scenes/SoundManager.tscn"
-SceneManager="*res://addons/Godot_library/Singletons/SceneManager/Scenes/SceneManager.tscn"
-SaveManager="*res://addons/Godot_library/Singletons/SaveManager/Scenes/SaveManager.tscn"
+SaveManager="*res://autoload/SaveManager.tscn"
+SceneManager="*res://autoload/SceneManager.tscn"
+SoundManager="*res://autoload/SoundManager.tscn"
 
 [display]
 

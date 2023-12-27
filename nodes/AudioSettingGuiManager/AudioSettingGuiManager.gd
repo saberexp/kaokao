@@ -5,7 +5,6 @@ extends Node
 @export var audio_settings_resource:AudioSettingsResource
 
 func _ready()->void:
-	audio_settings_resource.load_resource()
 	update_sliders()
 	for node in slider_container:
 		var bus_name: = node.name
