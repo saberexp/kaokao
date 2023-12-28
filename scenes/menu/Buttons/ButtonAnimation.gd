@@ -12,7 +12,8 @@ var default_shader_parameters: = {
 }
 
 var style_box:AnimatedStyleBoxFlat
-var tweens:Dictionary = {}
+var tweens_style:Dictionary = {}
+var tweens_shader:Dictionary = {}
 var is_down:bool
 var is_hover:bool
 var is_focused:bool
@@ -59,31 +60,39 @@ func set_style_tween(value:Dictionary, tween_time:float)->void:
 	if is_queued_for_deletion() || !is_inside_tree():
 		return
 	for key in value.keys():
-		if !tweens.has(key):
-			tweens[key] = null
-		var tween:Tween = tweens[key]
+		if !tweens_style.has(key):
+			tweens_style[key] = null
+		var tween:Tween = tweens_style[key]
 		if tween != null:
 			tween.kill()
 		tween = create_tween()
-		tweens[key] = tween
+		tweens_style[key] = tween
 		tween.tween_property(style_box, key, value[key], tween_time).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
 func set_style_tween_subset(value:Dictionary, subset:Dictionary, tween_time:float)->void:
 	for key in subset.keys():
 		if !value.has(key):
 			continue
-		if !tweens.has(key):
-			tweens[key] = null
-		var tween:Tween = tweens[key]
+		if !tweens_style.has(key):
+			tweens_style[key] = null
+		var tween:Tween = tweens_style[key]
 		if tween != null:
 			tween.kill()
 		tween = create_tween()
-		tweens[key] = tween
+		tweens_style[key] = tween
 		tween.tween_property(style_box, key, value[key], tween_time)
 
 func set_shader_tween(value:Dictionary, tween_time:float)->void:
 	material.set_shader_parameter("size", button.size)
 	for key in value.keys():
+		if !tweens_shader.has(key):
+			tweens_shader[key] = null
+		var tween:Tween = tweens_shader[key]
+		if tween != null:
+			tween.kill()
+		tween = create_tween()
+		tweens_shader[key] = tween
+		## TODO: tweening
 		material.set_shader_parameter(key, value[key])
 
 
