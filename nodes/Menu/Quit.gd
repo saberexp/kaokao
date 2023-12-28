@@ -1,4 +1,9 @@
-extends Button
+extends Node
 
-func _pressed()->void:
+@export var button:Button
+
+func _ready()->void:
+	button.pressed.connect(pressed)
+
+func pressed()->void:
 	get_tree().quit()

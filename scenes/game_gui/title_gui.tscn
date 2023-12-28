@@ -1,11 +1,1488 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpv4epw1i5b4g"]
+[gd_scene load_steps=50 format=3 uid="uid://dpv4epw1i5b4g"]
 
+[ext_resource type="Theme" uid="uid://yctjuhnen1br" path="res://resources/Themes/game_gui_theme.theme" id="1_2uqb8"]
 [ext_resource type="Script" path="res://addons/Godot_library/Nodes/MenuTraverseManager/MenuTraverseManager.gd" id="1_q1kds"]
 [ext_resource type="Script" path="res://nodes/Menu/NewGame.gd" id="2_3w4bi"]
 [ext_resource type="Script" path="res://nodes/AudioSettingGuiManager/AudioSettingGuiManager.gd" id="2_43xlx"]
 [ext_resource type="Script" path="res://nodes/Menu/Quit.gd" id="2_bf6ol"]
+[ext_resource type="Script" path="res://addons/Godot_library/StyleBox/flat_animated_properties.gd" id="3_chalq"]
 [ext_resource type="Resource" uid="uid://6gy6omnuu0y" path="res://resources/AudioSettingsResource/audio_settings_resource.tres" id="3_eeftq"]
 [ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://scenes/menu/sliders/audio_slider.tscn" id="4_ruqo4"]
+[ext_resource type="PackedScene" uid="uid://b3ww0jqqy1eq7" path="res://scenes/menu/Buttons/menu_button.tscn" id="5_kq1p3"]
+[ext_resource type="StyleBox" uid="uid://bfqm4rwrtskcc" path="res://resources/StyleBox/style_box_flat.stylebox" id="7_mhhww"]
+[ext_resource type="Material" uid="uid://chv0fg62cs0ou" path="res://resources/Material/HSplit/h_split.material.tres" id="11_6j0ru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqlwk"]
+resource_name = "Normal"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk6nu"]
+resource_name = "Normal"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibvrn"]
+resource_name = "Normal"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8klti"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p02e"]
+resource_name = "Normal"
+
+[sub_resource type="Theme" id="Theme_vrfxi"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_8klti")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_ga2dw"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86u18"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_tipck"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_86u18")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us0q6"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_c2wff"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_us0q6")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27goo"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_5kaut"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_27goo")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_vqjgl"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53xlo"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_jcoj1"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_53xlo")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_3lux2"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vi3ek"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_eonc0"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_vi3ek")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_2hk4u"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnojq"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_606hw"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_tnojq")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_6dr2o"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rrct"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_u70jn"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_2rrct")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_npujk"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w34e1"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_en1x7"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_w34e1")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_8t8bj"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86fit"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_cjxic"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_86fit")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_c4gb2"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7x4cm"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_scccc"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_7x4cm")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_vhumk"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xh2jo"]
+resource_local_to_scene = true
+resource_name = "Normal"
+bg_color = Color(0, 0, 0, 1)
+anti_aliasing = false
+script = ExtResource("3_chalq")
+normal = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+pressed = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+focus = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+hover = {
+"anti_aliasing": false,
+"anti_aliasing_size": 1.0,
+"bg_color": Color(0, 0, 0, 1),
+"border_blend": false,
+"border_color": Color(0.8, 0.8, 0.8, 1),
+"border_width_bottom": 0,
+"border_width_left": 0,
+"border_width_right": 0,
+"border_width_top": 0,
+"corner_detail": 8,
+"corner_radius_bottom_left": 0,
+"corner_radius_bottom_right": 0,
+"corner_radius_top_left": 0,
+"corner_radius_top_right": 0,
+"draw_center": true,
+"expand_margin_bottom": 0.0,
+"expand_margin_left": 0.0,
+"expand_margin_right": 0.0,
+"expand_margin_top": 0.0,
+"shadow_color": Color(0, 0, 0, 0.6),
+"shadow_offset": Vector2(0, 0),
+"shadow_size": 0,
+"skew": Vector2(0, 0)
+}
+
+[sub_resource type="Theme" id="Theme_3q7po"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = SubResource("StyleBoxFlat_xh2jo")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
+
+[sub_resource type="Theme" id="Theme_wpt0g"]
+resource_local_to_scene = true
+Button/styles/disabled = SubResource("StyleBoxFlat_cqlwk")
+Button/styles/focus = SubResource("StyleBoxFlat_kk6nu")
+Button/styles/hover = SubResource("StyleBoxFlat_ibvrn")
+Button/styles/normal = ExtResource("7_mhhww")
+Button/styles/pressed = SubResource("StyleBoxFlat_1p02e")
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -14,6 +1491,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2uqb8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -27,15 +1505,15 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Control" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Header" type="Control" parent="MarginContainer/Control"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Control"]
+[node name="Label" type="Label" parent="MarginContainer/Control/Header"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,13 +1528,13 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "COOL GAME"
 
-[node name="Container" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Body" type="MarginContainer" parent="MarginContainer/Control"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 150
 theme_override_constants/margin_right = 150
 
-[node name="MenuTraverseManager" type="Node" parent="MarginContainer/VBoxContainer/Container"]
+[node name="MenuTraverseManager" type="Node" parent="MarginContainer/Control/Body"]
 script = ExtResource("1_q1kds")
 menu_path = {
 ".": NodePath("../TitleMenu"),
@@ -66,124 +1544,221 @@ menu_path = {
 "./options/graphics": NodePath("../GraphicsMenu")
 }
 
-[node name="TitleMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Container"]
+[node name="TitleMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer/Container/TitleMenu"]
+[node name="Continue" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
-text = "New Game"
-script = ExtResource("2_3w4bi")
+theme = SubResource("Theme_vrfxi")
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer/Container/TitleMenu"]
+[node name="MenuButton" parent="MarginContainer/Control/Body/TitleMenu/Continue" index="0"]
+theme = SubResource("Theme_ga2dw")
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/Continue" index="1"]
+text = "Continue"
+
+[node name="ContinueComponent" type="Node" parent="MarginContainer/Control/Body/TitleMenu/Continue"]
+
+[node name="NewGame" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_tipck")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/TitleMenu/NewGame" index="0"]
+theme = SubResource("Theme_ga2dw")
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/NewGame" index="1"]
+text = "New Game"
+
+[node name="NewGameComponent" type="Node" parent="MarginContainer/Control/Body/TitleMenu/NewGame" node_paths=PackedStringArray("button")]
+script = ExtResource("2_3w4bi")
+button = NodePath("../MenuButton")
+
+[node name="Options" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("5_kq1p3")]
+layout_mode = 2
+theme = SubResource("Theme_c2wff")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/TitleMenu/Options" index="0"]
+theme = SubResource("Theme_ga2dw")
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/Options" index="1"]
 text = "Options"
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/Container/TitleMenu"]
+[node name="Quit" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
-text = "Quit"
-script = ExtResource("2_bf6ol")
+theme = SubResource("Theme_5kaut")
 
-[node name="OptionMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Container"]
+[node name="MenuButton" parent="MarginContainer/Control/Body/TitleMenu/Quit" index="0"]
+theme = SubResource("Theme_vqjgl")
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/Quit" index="1"]
+text = "Quit"
+
+[node name="QuitComponent" type="Node" parent="MarginContainer/Control/Body/TitleMenu/Quit" node_paths=PackedStringArray("button")]
+script = ExtResource("2_bf6ol")
+button = NodePath("../MenuButton")
+
+[node name="OptionMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Graphics" type="Button" parent="MarginContainer/VBoxContainer/Container/OptionMenu"]
+[node name="Graphics" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_jcoj1")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/OptionMenu/Graphics" index="0"]
+theme = SubResource("Theme_3lux2")
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Graphics" index="1"]
 text = "Graphics"
 
-[node name="Audio" type="Button" parent="MarginContainer/VBoxContainer/Container/OptionMenu"]
+[node name="Audio" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
-text = "Audio
-"
+theme = SubResource("Theme_eonc0")
 
-[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer/Container/OptionMenu"]
+[node name="MenuButton" parent="MarginContainer/Control/Body/OptionMenu/Audio" index="0"]
+theme = SubResource("Theme_2hk4u")
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Audio" index="1"]
+text = "Audio"
+
+[node name="Controls" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_606hw")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/OptionMenu/Controls" index="0"]
+theme = SubResource("Theme_6dr2o")
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Controls" index="1"]
 text = "Controls"
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Container/OptionMenu"]
+[node name="Back" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_u70jn")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/OptionMenu/Back" index="0"]
+theme = SubResource("Theme_npujk")
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Back" index="1"]
 text = "Back"
 
-[node name="GraphicsMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Container"]
+[node name="GraphicsMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Fullscreen" type="Button" parent="MarginContainer/VBoxContainer/Container/GraphicsMenu"]
+[node name="Fullscreen" parent="MarginContainer/Control/Body/GraphicsMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
-text = "Fullscreen: ON"
+theme = SubResource("Theme_en1x7")
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Container/GraphicsMenu"]
+[node name="MenuButton" parent="MarginContainer/Control/Body/GraphicsMenu/Fullscreen" index="0"]
+theme = SubResource("Theme_8t8bj")
+
+[node name="Label" parent="MarginContainer/Control/Body/GraphicsMenu/Fullscreen" index="1"]
+text = "Fullscreen: OFF"
+
+[node name="Back" parent="MarginContainer/Control/Body/GraphicsMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_cjxic")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/GraphicsMenu/Back" index="0"]
+theme = SubResource("Theme_c4gb2")
+
+[node name="Label" parent="MarginContainer/Control/Body/GraphicsMenu/Back" index="1"]
 text = "Back"
 
-[node name="ControlsMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Container"]
+[node name="ControlsMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Container/ControlsMenu"]
+[node name="Back" parent="MarginContainer/Control/Body/ControlsMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_scccc")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/ControlsMenu/Back" index="0"]
+theme = SubResource("Theme_vhumk")
+
+[node name="Label" parent="MarginContainer/Control/Body/ControlsMenu/Back" index="1"]
 text = "Back"
 
-[node name="AudioMenu" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Container"]
-visible = false
+[node name="AudioMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="AudioSettingGuiManager" type="Node" parent="MarginContainer/VBoxContainer/Container/AudioMenu" node_paths=PackedStringArray("slider_container")]
+[node name="AudioSettingGuiManager" type="Node" parent="MarginContainer/Control/Body/AudioMenu" node_paths=PackedStringArray("slider_container")]
 script = ExtResource("2_43xlx")
 slider_container = [NodePath("../Master"), NodePath("../Music"), NodePath("../Sounds")]
 audio_settings_resource = ExtResource("3_eeftq")
 
-[node name="Master" parent="MarginContainer/VBoxContainer/Container/AudioMenu" instance=ExtResource("4_ruqo4")]
+[node name="Master" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("4_ruqo4")]
 layout_mode = 2
 
-[node name="Label" parent="MarginContainer/VBoxContainer/Container/AudioMenu/Master" index="0"]
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Master" index="0"]
 text = "Master Volume"
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/Container/AudioMenu"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Control/Body/AudioMenu"]
+material = ExtResource("11_6j0ru")
 layout_mode = 2
 
-[node name="Music" parent="MarginContainer/VBoxContainer/Container/AudioMenu" instance=ExtResource("4_ruqo4")]
+[node name="Music" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("4_ruqo4")]
 layout_mode = 2
 
-[node name="Label" parent="MarginContainer/VBoxContainer/Container/AudioMenu/Music" index="0"]
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Music" index="0"]
 text = "Music Volume"
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer/Container/AudioMenu"]
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Control/Body/AudioMenu"]
+material = ExtResource("11_6j0ru")
 layout_mode = 2
 
-[node name="Sounds" parent="MarginContainer/VBoxContainer/Container/AudioMenu" instance=ExtResource("4_ruqo4")]
+[node name="Sounds" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("4_ruqo4")]
 layout_mode = 2
 
-[node name="Label" parent="MarginContainer/VBoxContainer/Container/AudioMenu/Sounds" index="0"]
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Sounds" index="0"]
 text = "Sounds Volume"
 
-[node name="HSeparator3" type="HSeparator" parent="MarginContainer/VBoxContainer/Container/AudioMenu"]
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/Control/Body/AudioMenu"]
+material = ExtResource("11_6j0ru")
 layout_mode = 2
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Container/AudioMenu"]
+[node name="Back" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("5_kq1p3")]
 layout_mode = 2
+theme = SubResource("Theme_3q7po")
+
+[node name="MenuButton" parent="MarginContainer/Control/Body/AudioMenu/Back" index="0"]
+theme = SubResource("Theme_wpt0g")
+
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Back" index="1"]
 text = "Back"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/TitleMenu/Options" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="open" binds= ["options"]]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/OptionMenu/Graphics" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="open" binds= ["graphics"]]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/OptionMenu/Audio" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="open" binds= ["audio"]]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/OptionMenu/Controls" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="open" binds= ["controls"]]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/OptionMenu/Back" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/GraphicsMenu/Back" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/ControlsMenu/Back" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/AudioMenu/Back" to="MarginContainer/VBoxContainer/Container/MenuTraverseManager" method="back"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Container/AudioMenu/Back" to="MarginContainer/VBoxContainer/Container/AudioMenu/AudioSettingGuiManager" method="save"]
+[connection signal="pressed" from="MarginContainer/Control/Body/TitleMenu/Options/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="open" binds= ["options"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Graphics/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="open" binds= ["graphics"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Audio/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="open" binds= ["audio"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Controls/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="open" binds= ["controls"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Back/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="back"]
+[connection signal="pressed" from="MarginContainer/Control/Body/GraphicsMenu/Back/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="back"]
+[connection signal="pressed" from="MarginContainer/Control/Body/ControlsMenu/Back/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="back"]
+[connection signal="pressed" from="MarginContainer/Control/Body/AudioMenu/Back/MenuButton" to="MarginContainer/Control/Body/MenuTraverseManager" method="back"]
 
-[editable path="MarginContainer/VBoxContainer/Container/AudioMenu/Master"]
-[editable path="MarginContainer/VBoxContainer/Container/AudioMenu/Music"]
-[editable path="MarginContainer/VBoxContainer/Container/AudioMenu/Sounds"]
+[editable path="MarginContainer/Control/Body/TitleMenu/Continue"]
+[editable path="MarginContainer/Control/Body/TitleMenu/NewGame"]
+[editable path="MarginContainer/Control/Body/TitleMenu/Options"]
+[editable path="MarginContainer/Control/Body/TitleMenu/Quit"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Graphics"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Audio"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Controls"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Back"]
+[editable path="MarginContainer/Control/Body/GraphicsMenu/Fullscreen"]
+[editable path="MarginContainer/Control/Body/GraphicsMenu/Back"]
+[editable path="MarginContainer/Control/Body/ControlsMenu/Back"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Master"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Music"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Sounds"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Back"]

@@ -1,11 +1,30 @@
-[gd_scene format=3 uid="uid://c4jwvw17x6fwl"]
+[gd_scene load_steps=6 format=3 uid="uid://c4jwvw17x6fwl"]
+
+[ext_resource type="Theme" uid="uid://yctjuhnen1br" path="res://resources/Themes/game_gui_theme.theme" id="1_xwi82"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gfiq1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jy667"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gwi3y"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_l1228"]
 
 [node name="VBoxContainer" type="VBoxContainer"]
+theme = ExtResource("1_xwi82")
+theme_override_constants/separation = -2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="Slider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(50, 8)
 layout_mode = 2
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_gfiq1")
+theme_override_icons/grabber_highlight = SubResource("PlaceholderTexture2D_jy667")
+theme_override_icons/grabber_disabled = SubResource("PlaceholderTexture2D_gwi3y")
+theme_override_icons/tick = SubResource("PlaceholderTexture2D_l1228")
 max_value = 1.0
 step = 0.001
+value = 0.695
