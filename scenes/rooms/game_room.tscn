@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6l56rti7m1q2"]
+[gd_scene load_steps=4 format=3 uid="uid://c6l56rti7m1q2"]
 
 [ext_resource type="PackedScene" uid="uid://7847urnhb8hl" path="res://scenes/rooms/room_template.tscn" id="1_bxkwu"]
 [ext_resource type="Texture2D" uid="uid://ddwmicapeu3ix" path="res://icon.svg" id="2_kttvo"]
+[ext_resource type="Script" path="res://scenes/rooms/Sprite2D.gd" id="3_n365a"]
 
 [node name="GameRoom" instance=ExtResource("1_bxkwu")]
 gui_scene_key = "game_gui"
@@ -9,3 +10,4 @@ gui_scene_key = "game_gui"
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 position = Vector2(224, 133)
 texture = ExtResource("2_kttvo")
+script = ExtResource("3_n365a")
