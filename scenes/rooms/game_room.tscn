@@ -8,6 +8,8 @@
 gui_scene_key = "game_gui"
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture_filter = 1
+texture_repeat = 2
 position = Vector2(224, 133)
 texture = ExtResource("2_kttvo")
 script = ExtResource("3_n365a")
